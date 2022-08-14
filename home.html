@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Title</title>
+
+    <style type="text/css">
+        .body{
+            background-image: url("t8w4sf.jpg");
+
+        },
+        .auto-style1 {
+            width: 194px;
+        }
+        .auto-style2 {
+            border-style: double;
+            border-width: 3px;
+            width: 41%;
+            height: 317px;
+            margin-left: 496px;
+
+
+        }
+        .auto-style4 {
+            height: 20px;
+            text-align: center;
+            color: #808080;
+            font-family: Arial;
+            font-size: x-large;
+        }
+        .auto-style7 {
+            height: 73px;
+            text-align: center;
+            color: #808080;
+            font-family: Arial;
+            font-size: x-large;
+        }
+    </style>
+
+</head>
+<body ><form action="{{url_for('predict')}}" method="post">
+<nav class="navbar navbar-inverse" style="background-color:#1F3C91">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">STOCK MARKET PREDICTION</a>
+    </div>
+
+  </div>
+</nav>
+  <br /><br /><br /><br /><br /><br />
+    &nbsp;
+    <table class="auto-style2">
+        <tr>
+            <td class="auto-style7" colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style4" colspan="2">  <label for="cars">Choose a Stock:</label>
+ <!-- <select name="STOCK" id="STOCK">
+    <option value="ONGC.NS">Volvo</option>
+    <option value="BAJFINANCE.NS">Saab</option>
+    <option value="APOLLOHOSP.NS">Opel</option>
+    <option value="CIPLA.NS">Audi</option>
+    <option value="BRITANNIA.NS">Volvo</option>
+    <option value="TCS.NS">Saab</option>
+    <option value="BHARTIARTL.NS">Opel</option>
+    <option value="HEROMOTOCO.NS">Audi</option>
+
+    <option value="WIPRO.NS">Volvo</option>
+    <option value="TECHM.NS">Saab</option>
+    <option value="TITAN.NS">Opel</option>
+    <option value="ULTRACEMCO.NS">Audi</option>
+    <option value="TATASTEEL.NS">Volvo</option>
+    <option value="BAJAJFINSV.NS">Saab</option>
+    <option value="KOTAKBANK.NS">Opel</option>
+    <option value="ITC.NS">Audi</option>
+
+    <option value="INDUSINDBK.NS">Volvo</option>
+    <option value="COALINDIA.NS">Saab</option>
+    <option value="TITAN.NS">Opel</option>
+    <option value="ULTRACEMCO.NS">Audi</option>
+    <option value="TATASTEEL.NS">Volvo</option>
+    <option value="BAJAJFINSV.NS">Saab</option>
+    <option value="KOTAKBANK.NS">Opel</option>
+    <option value="ITC.NS">Audi</option>
+  </select>-->
+                <select name= Stocks method="GET" action="/">
+    {% for colour in colours %}
+    <option value= "{{colour}}" SELECTED>{{colour}}</option>"
+    {% endfor %}
+</select>
+  <br><br>
+  <button type="submit" value="submit">Submit</button>
+&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="text-center" colspan="2" >  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>{{Predicted}} {{prediction_text}}</p>
+ </td>
+        </tr>
+        <tr>
+
+            <td class="auto-style1">&nbsp </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+
+
+
+<div class="container">
+
+</div>
+</form>
+
+</body>
+</html>
